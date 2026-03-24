@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>путешествия</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .nav {
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            margin-right: 10px;
+            color: red;
+        }
+
+        .block {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ПУТЕШЕСТВИЯ</h1>
+    <p>навигация по блокам с якорями</p>
+
+    <div class="nav">
+        <a href="#country">Страна</a>
+        <a href="#map">Карта</a>
+        <a href="#description">Описание</a>
+        <a href="#weather">Погода</a>
+        <a href="#about">О стране</a>
+        <a href="#form">Форма</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+    </div>
+
+    <hr>
+
+    <div class="container">
+
+        <div class="block" id="country">
+            <h2>НАЗВАНИЕ СТРАНЫ</h2>
+            <p>блок header стили для заголовков h1, h2, h3</p>
+        </div>
+
+        <div class="block" id="map">
+            <h2>Карта регионов</h2>
+            <p>Кликабельное svg-изображение с возможностью выбора + анимация + мобилка</p>
+        </div>
+
+        <div class="block" id="description">
+            <h2>Описание</h2>
+            <p>Красиво оформленный текст стили для блока с текстом</p>
+        </div>
+
+        <div class="block" id="weather">
+            <h2>Погода</h2>
+            <p>желательно на карте, либо прогноз по регионам/городам блок с min-height</p>
+        </div>
+
+        <div class="block" id="about">
+            <h2>О нас/ о стране</h2>
+            <p>блок с цифрами, тезисно стили с display:flex</p>
+        </div>
+
+        <div class="block" id="form">
+            <h2>Форма обратной связи/Задать вопрос</h2>
+            <p>форма для ввода и отправки текста стили элементов управления</p>
+        </div>
+
+        <div class="block" id="faq">
+            <h2>FAQ</h2>
+            <p>раскрывающие поля обработка раскрывашек</p>
+        </div>
+
+        <div class="block" id="contacts">
+            <h2>Контакты</h2>
+            <p>блок footer</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <p>Copyright ©</p>
+    </div>
+
+</body>
+</html>

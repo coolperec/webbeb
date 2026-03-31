@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+
+        ::selection { color: rgb(255, 255, 255); background-color: #ff0000; }
+
+        body {
+            font-family: Terminal Grotesque, White Squared;
+        }
+
+        @media (max-width: 600px) {
+            .button,
+            .button1 {
+                flex: 1 1 100%;
+            }
+        }
+
+        .h2 {
+            font-size: 110px;
+            text-align: center;
+            margin-top: 200px;
+            margin-bottom: 50px;
+            font-family: White Squared;
+        }
+
+
+        .container {
+            width: 50%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .first{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+
+        }
+
+        .todo-list {
+            width: 100%;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .todo-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .todo-list::-webkit-scrollbar-thumb {
+            background: red;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid #000;
+            padding: 30px;
+            margin-bottom: 10px;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .item-Completed {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid #000;
+            padding: 30px;
+            margin-bottom: 10px;
+            font-size: 30px;
+            margin-top: 10px;
+            background-color: #686868;
+        }
+
+        .span {/*строчный чо то там элемент */
+            text-decoration: line-through;
+        }
+
+        .todo-item:hover {
+            background-color: rgb(200, 200, 200);
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+
+        .delete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+
+        .input {
+            flex: 1 1 300px;
+            padding: 12px 20px;
+            border: 2px solid #000000;
+            font-family: Terminal Grotesque;
+            font-size: 20px;
+        }
+
+        .button {
+            flex: 1 1 150px;
+            border: none;
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: auto;
+            cursor: pointer;
+            font-family: Terminal Grotesque;
+            font-size: 20px;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .button1{
+            flex: 1 1 150px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 2px solid #000000;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: auto;
+            cursor: pointer;
+            font-family: Terminal Grotesque;
+            font-size: 20px;
+        }
+        .button1:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        input[type="checkbox"] {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        }
+
+        .footer {
+            margin-top: 100px;
+            border: #000000 solid 1px;
+        }
+
+
+        .h3 {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px;
+            font-family: Terminal Grotesque;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="h2">To Do List</div>
+    <div class="container">
+        <div class="first">
+            <input  type="text" placeholder="Add a new task..." class="input">
+            <button class="button">Add Task</button>
+            <button class="button1">Delete All</button>
+        </div>
+
+        <div class="todo-list">
+            <li class="item-Completed">
+                <div class="left">
+                    <input type="checkbox" checked>
+                    <span class="span">Am Am Am</span>
+                </div>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="todo-item">
+                <div class="left">
+                    <input type="checkbox">
+                    <span>Go to Shop</span>
+                </div>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="todo-item">
+                <div class="left">
+                    <input type="checkbox">
+                    <span>Walk the dog</span>
+                </div>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="todo-item">
+                <div class="left">
+                    <input type="checkbox">
+                    <span>Do laundry</span>
+                </div>
+                <button class="delete-btn">Delete</button>
+            </li>
+        </div>
+    </div>
+
+    <hr class="footer">
+    <h3 class="h3">Copyright©</h3>
+
+</body>
+</html>
